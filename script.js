@@ -103,7 +103,7 @@ function game() {
 
   if (score === 3) {
     alert("Congratulations, you probably cheated!");
-  } else if (score !== 3) alert("You suck! Try again...");
+  } else if (score < 2) alert("You suck! Try again...");
   else {
     function round4() {
       let playerChoice = prompt(
