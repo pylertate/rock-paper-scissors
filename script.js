@@ -35,20 +35,17 @@ function round(playerChoice, computerChoice) {
   )
     return "It's a tie!";
   // paper options
-  else if (playerChoice.toLowerCase() == "paper" && computerChoice == "Scissors")
+  else if (
+    playerChoice.toLowerCase() == "paper" &&
+    computerChoice == "Scissors"
+  )
     return "You Lose!";
   else if (playerChoice.toLowerCase() == "paper" && computerChoice == "Rock")
     return "You Win!";
-  else if (
-    playerChoice.toLowerCase() == "paper" &&
-    computerChoice == "Paper"
-  )
+  else if (playerChoice.toLowerCase() == "paper" && computerChoice == "Paper")
     return "It's a Tie!";
   else return "error";
 }
 
-let playerChoice = prompt("lets play rock paper scissors");
+let playerChoice = prompt("lets play rock paper scissors!");
 alert(round(playerChoice, computerChoice));
-
-
-
