@@ -1,5 +1,6 @@
 const computerChoice = comupterPlay();
-
+//this function creates a random number between 1 and 3 and assigns it 
+//to either rock/paper/or scissors and exports that value
 function comupterPlay() {
   let computerChoice = Math.floor(Math.random() * 3);
   {
@@ -9,6 +10,10 @@ function comupterPlay() {
   }
   return computerChoice;
 }
+//this function plays the RPC game five times using the computerPlay() 
+//function and then alerts win or loss and creates a value assigned to 
+// result variable
+
 
 function round(playerChoice, computerChoice) {
   // rock options
@@ -77,6 +82,10 @@ function round(playerChoice, computerChoice) {
   } else alert("input: rock, paper, or scissors");
 }
 
+//this is the main function of the game
+//it runs the game five times and adds up the values of result
+//it then uses conditional statemtns for overall win/loss
+
 function game() {
   function round1() {
     let playerChoice = prompt("Choose your weapon: ");
@@ -125,6 +134,8 @@ function game() {
     else alert("YOU LOSE. Try again?");
   }
 }
+
+//prompts player if they want to start a new game and then runs game()
 newGame = confirm("Would you like to play Rock, Paper, Scissors?");
 
 if (newGame == true) game();
