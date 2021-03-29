@@ -8,6 +8,7 @@ const bottomText = document.querySelector(".bottomText");
 const newGame = document.createElement("button");
 newGame.innerHTML = "New Game?";
 newGame.classList.add("newGame");
+const result = document.querySelector("#result");
 const refreshPage = () => {
   location.reload();
 };
@@ -58,9 +59,17 @@ function youWin() {
 rockButton.addEventListener("click", () => {
   let computerChoice = comupterPlay();
 
-  if (computerChoice == "Rock") return;
-  if (computerChoice == "Scissors") playerScore++;
-  if (computerChoice == "Paper") computerScore++;
+  if (computerChoice == "Rock") {
+    result.innerHTML = `Computer chose: ${computerChoice}. It's a tie!`;
+  }
+  if (computerChoice == "Scissors") {
+    playerScore++;
+    result.innerHTML = `Computer chose: ${computerChoice}. You win this round!`;
+  }
+  if (computerChoice == "Paper") {
+    computerScore++;
+    result.innerHTML = `Computer chose: ${computerChoice}. You lose this round!`;
+  }
   player.innerHTML = `Player: ${playerScore}`;
   computer.innerHTML = `Computer: ${computerScore}`;
   if (playerScore >= 3 && computerScore < 3) {
@@ -74,9 +83,16 @@ rockButton.addEventListener("click", () => {
 paperButton.addEventListener("click", () => {
   let computerChoice = comupterPlay();
 
-  if (computerChoice == "Rock") playerScore++;
-  if (computerChoice == "Scissors") computerScore++;
-  if (computerChoice == "Paper") return;
+  if (computerChoice == "Rock") {
+    playerScore++;
+    result.innerHTML = `Computer chose: ${computerChoice}. You win this round!`;
+  }
+  if (computerChoice == "Scissors") {computerScore++;
+result.innerHTML = `Computer chose: ${computerChoice}. You lose this round!`
+}
+  if (computerChoice == "Paper") {
+    result.innerHTML = `Computer chose: ${computerChoice}. It's a tie!`;
+  }
   player.innerHTML = `Player: ${playerScore}`;
   computer.innerHTML = `Computer: ${computerScore}`;
   if (playerScore >= 3 && computerScore < 3) {
@@ -90,9 +106,17 @@ paperButton.addEventListener("click", () => {
 scissorsButton.addEventListener("click", () => {
   let computerChoice = comupterPlay();
 
-  if (computerChoice == "Rock") computerScore++;
-  if (computerChoice == "Scissors") return;
-  if (computerChoice == "Paper") playerScore++;
+  if (computerChoice == "Rock") {
+    computerScore++;
+    result.innerHTML = `Computer chose: ${computerChoice}. You lose this round!`;
+  }
+  if (computerChoice == "Scissors") {
+    result.innerHTML = `Computer chose: ${computerChoice}. It's a tie!`;
+  }
+  if (computerChoice == "Paper") {
+    playerScore++;
+    result.innerHTML = `Computer chose: ${computerChoice}. You win this round!`;
+  }
   player.innerHTML = `Player: ${playerScore}`;
   computer.innerHTML = `Computer: ${computerScore}`;
   if (playerScore >= 3 && computerScore < 3) {
