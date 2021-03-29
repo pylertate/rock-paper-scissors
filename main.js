@@ -28,7 +28,6 @@ function comupterPlay() {
   return computerChoice;
 }
 
-
 function youLose() {
   player.remove();
   computer.remove();
@@ -55,7 +54,6 @@ function youWin() {
   scoreBoard.appendChild(youWinScreen);
   scoreBoard.appendChild(newGame);
 }
-
 
 rockButton.addEventListener("click", () => {
   let computerChoice = comupterPlay();
