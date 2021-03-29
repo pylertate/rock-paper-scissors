@@ -50,7 +50,7 @@ function youWin() {
   scissorsButton.remove();
   bottomText.remove();
   const youWinScreen = document.createElement("div");
-  youLoseScreen.classList.add("endScreen");
+  youWinScreen.classList.add("endScreen");
   youWinScreen.innerHTML = "You Win!";
   scoreBoard.appendChild(youWinScreen);
   scoreBoard.appendChild(newGame);
