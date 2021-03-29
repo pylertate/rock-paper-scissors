@@ -5,8 +5,11 @@
 body {
   background-color: black;
   color: white;
-  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: monospace;
   text-align: center;
+}
+button{
+    font-family: monospace;
 }
 .scoreboard{
     text-align: center;
