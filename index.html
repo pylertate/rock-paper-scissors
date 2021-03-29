@@ -4,9 +4,24 @@
     <meta charset="utf-8" />
     <title>Rock Paper Scissors</title>
     <style></style>
+    <link rel="stylesheet" href="styles.css">
   </head>
 
   <body>
-    <script src="./script.js"></script>
+    <div class="scoreBoard">
+      <p id="playerScore"></p>
+      <p id="computerScore"></p>
+    </div>
+    <div class="buttons">
+      <button id="rock"><img src="./images/rock.png" alt="" class="images" ></button>
+      <button id="paper"><img src="./images/paper.png" class="images" alt=""></button>
+      <button id="scissors" style="filter:invert(1)"><img src="./images/scissors.png" class="images" alt=""></button>
+    </div>
+    <div class="bottomText">
+      <h1>Rock, Paper, Scissors!</h1>
+      <h2>First to 5 Wins!!!</h2>
+    </div>
+
+    <script src="./main.js"></script>
   </body>
 </html>
